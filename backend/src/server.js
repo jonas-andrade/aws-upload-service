@@ -28,7 +28,7 @@ async function uploadToS3(file) {
     };
 
     await s3.send(new PutObjectCommand(params));
-    return uniqueKey; // Retorne a chave única para gerar a URL
+    return uniqueKey;
 }
 app.post('/upload', upload.single('file'), async (req, res) => {
     try {
