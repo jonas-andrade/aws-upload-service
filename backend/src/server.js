@@ -5,7 +5,6 @@ const multer = require('multer');
 const cors = require('cors');
 const { S3Client, PutObjectCommand } = require('@aws-sdk/client-s3');
 
-// Middleware
 app.use(express.json());
 app.use(cors());
 const upload = multer({ storage: multer.memoryStorage() });
